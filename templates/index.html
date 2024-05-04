@@ -4,12 +4,22 @@
 
 {% block contenido %}
 <table align="center">
+    <thead>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th>Genero</th>
+      <th>Fecha publicacion</th>
+      <th>Precio</th>
+      <th>Stock</th>
+    </thead>
     {% for libro in datos %}
     <tr>
         <td>{{ libro.titulo }}</td>
         <td>{{ libro.autor }}</td>
         <td>{{ libro.genero }}</td>
-        <td style="text-align:right">{{ "{:,}".format(libro.precio) }}</td>
+        <td>{{ libro.fecha_publicacion }}</td>
+        <td>{{ libro.precio }}</td>
+        <td>{{ libro.stock }}</td>
     </tr>
     {% endfor %}
 </table>
