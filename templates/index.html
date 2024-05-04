@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Libreria{% endblock %}
+
+{% block contenido %}
+<table align="center">
+    {% for libro in datos %}
+    <tr>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.autor }}</td>
+        <td>{{ libro.genero }}</td>
+        <td style="text-align:right">{{ "{:,}".format(libro.precio) }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
