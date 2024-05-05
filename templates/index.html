@@ -3,7 +3,9 @@
 {% block titulo %}Libreria{% endblock %}
 
 {% block contenido %}
-<table align="center">
+<div class="main">
+  <h1>Libreria</h1>
+  <table align="center">
     <thead>
       <th>Titulo</th>
       <th>Autor</th>
@@ -13,12 +15,13 @@
     </thead>
     {% for libro in datos %}
     <tr>
-        <td>{{ libro.titulo }}</td>
-        <td>{{ libro.autor }}</td>
-        <td>{{ libro.genero }}</td>
-        <td>{{ libro.fecha_publicacion }}</td>
-        <td><a href="/libro/{{libro.id}}">detalles</a></td>
+      <td>{{ libro.titulo }}</td>
+      <td>{{ libro.autor }}</td>
+      <td>{{ libro.genero }}</td>
+      <td>{{ libro.fecha_publicacion }}</td>
+      <td><a href="/libro/{{libro.id}}">detalles</a></td>
     </tr>
     {% endfor %}
-</table>
+  </table>
+</div>
 {% endblock %}
