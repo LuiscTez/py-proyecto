@@ -9,8 +9,7 @@
       <th>Autor</th>
       <th>Genero</th>
       <th>Fecha publicacion</th>
-      <th>Precio</th>
-      <th>Stock</th>
+      <th>Consultar detalles</th>
     </thead>
     {% for libro in datos %}
     <tr>
@@ -18,8 +17,7 @@
         <td>{{ libro.autor }}</td>
         <td>{{ libro.genero }}</td>
         <td>{{ libro.fecha_publicacion }}</td>
-        <td>{{ libro.precio }}</td>
-        <td>{{ libro.stock }}</td>
+        <td><a href="/libro/{{libro.id}}">detalles</a></td>
     </tr>
     {% endfor %}
 </table>

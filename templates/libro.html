@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Detalles Libro{% endblock %}
+
+{% block contenido %}
+<div class="detalles">
+  <h1>Detalles de Libro</h1>
+  <table>
+    <thead>
+      <th>Titulo</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Stock</th>
+    </thead>
+    <tr>
+      <td>{{libro.titulo}}</td>
+      <td>{{libro.precio}}</td>
+      <td>{{libro.cantidad}}</td>
+      <td>{{libro.stock}}</td>
+    </tr>
+    <tr>
+  </table>
+  <button><a href="{{url_for('index')}}">Regresar</a></button>
+</div>
+
+{% endblock %}

@@ -12,12 +12,13 @@ def index():
     return render_template('index.html', datos = libros)
 
 
-# @app.route('/producto/<int:pid>')
-# def producto(pid):
-#     for producto in productos:
-#         if pid == producto['id']:
-#             return render_template('producto.html', producto=producto)
-#     return redirect('/')
+@app.route('/libro/<int:pid>')
+def libro(pid):
+    for libro in libros:
+        if pid == libro["id"]:
+            return render_template('libro.html', libro=libro)
+        #print(libro["id"])
+    return redirect('/')
 
 
 
